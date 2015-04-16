@@ -48,36 +48,11 @@ class Container():
 			c.path(self.center[0],self.center[1],container.center[0],container.center[1])
 
 class Canvas:
+	brushes = {"empty":0, "hallway":1, "room":2, "hub":3}
 	def __init__(self, w, h, color = "empty"):
-		self.board = zeros((h,w,3), dtype=uint8)
+		self.board = zeros((h,w), dtype=uint8)
 		self.w = w
 		self.h = h
-		self.brushes = {
-			# topology
-			"empty": [0,255,0],
-			"room": [255,255,255],
-			"hallway": [160,160,160],
-			"hub": [255,255,255],
-			# environment
-			"serene":[131,110,228],
-			"calm":[129,255,149],
-			"wild":[255,247,134],
-			"dangerous":[255,167,104],
-			"evil":[255,0,16],
-			# materials
-			"rock": [186,187,170],
-			"rugged": [174,143,112],
-			"sand": [240,144,24],
-			"mossy": [29,125,23],
-			"muddy": [158,136,0],
-			"flooded": [35,122,186],
-			"gelid": [73,215,226],
-			"gloomy": [51,2,45],
-			"ruins": [115,154,157],
-			"magma": [198,20,0],
-			"chamber": [187,187,155],
-			"temple": [235,234,226]}
-
 		self.set_brush(color)
 	def set_brush(self, code):
 		self.color = self.brushes[code]
@@ -101,14 +76,14 @@ class Canvas:
 				if sqrt(x_offset**2+y_offset**2)<r:
 					self.board[x+x_offset,y+y_offset] = self.color
 	def draw(self):
-		im = Image.fromarray(self.board,'RGB')
+		im = Image.fromarray(self.board)
 		im.save(MAP_NAME)
 	def __str__(self):
 		return str(self.board)
 
 class Room:
 	environments = ["serene", "calm", "wild", "dangerous", "evil"]
-	biomes = ["rock", "rugged", "sand", "mossy", "muddy", "flooded", "gelid", "gloomy", "ruins", "magma", "chamber", "temple"]
+	biomes = ["rock", "rugged", "sand", "mossy", "muddy", "flooded", "gelid", "gloomy", "magma"]
 	biomes_CDF = cumsum([0.25,0.14,0.12,0.09,0.11,0.07,0.06,0.06,0.04,0.02,0.02,0.02])
 	def __init__(self, container):
 		self.x = container.x+randint(0, floor(container.w/5))
@@ -121,7 +96,6 @@ class Room:
 		roll = random()*0.9+(2*container.distance_from_center/MAP_WIDTH)*0.1
 		self.biome = next(n for n,b in enumerate(self.biomes_CDF) if roll<b)
 	def paint(self,c):
-		c.set_brush(self.biomes[self.biome])
 		c.filled_rectangle(self.x, self.y,self.w, self.h)
 
 def random_split(container):
@@ -224,6 +198,6 @@ def main(num_players, seed_number):
 	logger.info("Generating hub")
 	canvas.set_brush("hub")
 	canvas.circle(int(MAP_WIDTH/2),int(MAP_HEIGHT/2),int(CENTER_HUB_RADIO))
+	#canvas.draw()
 
-	logger.info("Drawing image")
-	canvas.draw()
+	return (rooms, canvas.board)

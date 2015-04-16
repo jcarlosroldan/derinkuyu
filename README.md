@@ -2,7 +2,7 @@
 Derinkuyu is a online multiplayer roguelike game, with biomes and procedural generation.
 
 ## Description
-The name stands for [Derinkuyu underground city], an ancient underground city in Nevşehir, Turkey. The city was connected with other underground cities through miles of tunnels, and sheltered people in almost all ages of mankind. Life is tough when you live on a cave, and you will have to fight and interact to survive. 
+The name stands for [Derinkuyu underground city], an ancient underground city in Nevşehir, Turkey. The city was connected with other underground cities through miles of tunnels, and sheltered people in almost all ages of mankind. Life is tough when you live on a cave, and you will have to fight and interact to survive.
 
 ## How to play
 Since the server is a service, client can be developed for any platform.
@@ -13,6 +13,7 @@ To configure the server side, you will need Python 3 with the following extensio
 * [Numpy 1.9.0]
 * [PIL 1.1.7]
 * [Noise 1.2.2]
+
 At the moment, you only can generate maps by specifying the number of players.
 
 ### How to contribute?
@@ -22,4 +23,3 @@ The development of this game is on an early stage, so the code is a bit *efferve
 [available here]:http://85.136.83.95/public/derinkuyu/
 [Numpy 1.9.0]:http://sourceforge.net/projects/numpy/files/NumPy/1.9.0/
 [PIL 1.1.7]:http://www.pythonware.com/products/pil/#pil117
-[Noise 1.2.2]: https://pypi.python.org/pypi/noise/1.2.2

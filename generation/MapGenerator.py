@@ -1,9 +1,9 @@
 from argparse import Action, ArgumentParser
 from os.path import isdir
 from os import access, R_OK
-from logging import info, warning, error, basicConfig, DEBUG
+from logging import debug, info, warning, error, basicConfig, DEBUG
 from datetime import datetime
-import BSPTree
+import BSPTree, Cellautomata, RoomJoiner, Togetherness, BiomeSwitch
 
 def check_range(min_value,max_value,min_included=True,max_included=True):
 	class CheckRange(Action):
@@ -30,6 +30,9 @@ parser.add_argument('-p','--path',type=str,required=True,action=CheckDirectory,h
 parser.add_argument('-s','--seed',type=int,default=None,help='Generated room seed.')
 
 arguments=parser.parse_args()
-basicConfig(filename='./logs/%s'%datetime.now().strftime('%Y-%m-%d.txt'),level=DEBUG,format='[%(asctime)s]\t%(message)s')
+basicConfig(filename='./logs/%s'%datetime.now().strftime('%Y-%m-%d.txt'),level=DEBUG,format='%(asctime)s\t%(name)s\t%(message)s')
 
-BSPTree.main(arguments.nplayers, arguments.seed)
+(rooms, map) = BSPTree.main(arguments.nplayers, arguments.seed)
+map = Cellautomata.main(map)
+rooms = Togetherness.main(RoomJoiner.main(rooms))
+(rooms, map) = BiomeSwitch.main(rooms, map)
