@@ -12,7 +12,6 @@ A browser client will be [available here] in the future.
 To configure the server side, you will need Python 3 with the following extensions:
 * [Numpy 1.9.0]
 * [PIL 1.1.7]
-* [Noise 1.2.2]
 
 At the moment, you only can generate maps by specifying the number of players.
 
