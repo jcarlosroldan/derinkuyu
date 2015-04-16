@@ -1,8 +1,9 @@
 from random import randint, seed, choice, random
-from numpy import zeros, uint8
+from numpy import zeros, uint8, cumsum, floor, ceil
 from math import sqrt, log
 from collections import namedtuple
 from PIL import Image
+from logging import info, getLogger
 
 class Tree:
 	def __init__(self, leaf):
@@ -43,7 +44,7 @@ class Container():
 	def paint(self, c):
 		c.stroke_rectangle(self.x, self.y, self.w, self.h)
 	def draw_path(self,c,container):
-		if self.distance_from_center<MAP_WIDTH/2 and container.distance_from_center<MAP_WIDTH/2:
+		if True:#self.distance_from_center<MAP_WIDTH/2 and container.distance_from_center<MAP_WIDTH/2:
 			c.path(self.center[0],self.center[1],container.center[0],container.center[1])
 
 class Canvas:
@@ -52,14 +53,31 @@ class Canvas:
 		self.w = w
 		self.h = h
 		self.brushes = {
-			"empty": [0,0,0],
+			# topology
+			"empty": [0,255,0],
 			"room": [255,255,255],
-			"hallway":[160,160,160],
+			"hallway": [160,160,160],
+			"hub": [255,255,255],
+			# environment
 			"serene":[131,110,228],
 			"calm":[129,255,149],
 			"wild":[255,247,134],
 			"dangerous":[255,167,104],
-			"evil":[255,0,16]}
+			"evil":[255,0,16],
+			# materials
+			"rock": [186,187,170],
+			"rugged": [174,143,112],
+			"sand": [240,144,24],
+			"mossy": [29,125,23],
+			"muddy": [158,136,0],
+			"flooded": [35,122,186],
+			"gelid": [73,215,226],
+			"gloomy": [51,2,45],
+			"ruins": [115,154,157],
+			"magma": [198,20,0],
+			"chamber": [187,187,155],
+			"temple": [235,234,226]}
+
 		self.set_brush(color)
 	def set_brush(self, code):
 		self.color = self.brushes[code]
@@ -77,6 +95,11 @@ class Canvas:
 			self.board[y:y+length,x] = self.color
 	def path(self,x1,y1,x2,y2):
 		self.board[y1:y2+1,x1:x2+1] = self.color
+	def circle(self,x,y,r):
+		for x_offset in range(-r,r+1):
+			for y_offset in range(-r,r+1):
+				if sqrt(x_offset**2+y_offset**2)<r:
+					self.board[x+x_offset,y+y_offset] = self.color
 	def draw(self):
 		im = Image.fromarray(self.board,'RGB')
 		im.save(MAP_NAME)
@@ -85,16 +108,20 @@ class Canvas:
 
 class Room:
 	environments = ["serene", "calm", "wild", "dangerous", "evil"]
+	biomes = ["rock", "rugged", "sand", "mossy", "muddy", "flooded", "gelid", "gloomy", "ruins", "magma", "chamber", "temple"]
+	biomes_CDF = cumsum([0.25,0.14,0.12,0.09,0.11,0.07,0.06,0.06,0.04,0.02,0.02,0.02])
 	def __init__(self, container):
-		self.x = container.x+randint(0, int(container.w/3))
-		self.y = container.y+randint(0, int(container.h/3))
+		self.x = container.x+randint(0, floor(container.w/5))
+		self.y = container.y+randint(0, floor(container.h/5))
 		self.w = container.w-(self.x-container.x)
 		self.h = container.h-(self.y-container.y)
-		self.w -= randint(0,int(self.w/3))
-		self.h -= randint(0,int(self.w/3))
+		self.w -= randint(0,ceil(self.w/5))
+		self.h -= randint(0,ceil(self.w/5))
 		self.environment = int(min(4,10*(container.distance_from_center/MAP_WIDTH)+random()*2-1))
+		roll = random()*0.9+(2*container.distance_from_center/MAP_WIDTH)*0.1
+		self.biome = next(n for n,b in enumerate(self.biomes_CDF) if roll<b)
 	def paint(self,c):
-		c.set_brush(self.environments[self.environment])
+		c.set_brush(self.biomes[self.biome])
 		c.filled_rectangle(self.x, self.y,self.w, self.h)
 
 def random_split(container):
@@ -145,37 +172,58 @@ def draw_paths(c, tree):
 	draw_paths(c, tree.lchild)
 	draw_paths(c, tree.rchild)
 
-MAP_WIDTH=1200
-MAP_HEIGHT=MAP_WIDTH
-N_ITERATIONS=log(MAP_WIDTH*100,2)
-H_RATIO=0.47
-W_RATIO=H_RATIO
-MIN_ROOM_SIDE = 30
-CENTER_HUB_HOLE = 20 + min(180,MAP_WIDTH/60)
-CENTER_HUB_RADIO = CENTER_HUB_HOLE*0.8
-MAP_NAME="result.png"
+MAP_WIDTH = 0
+MAP_HEIGHT = 0
+N_ITERATIONS = 0
+H_RATIO = 0
+W_RATIO = 0
+MIN_ROOM_SIDE = 0
+CENTER_HUB_HOLE = 0
+CENTER_HUB_RADIO = 0
+MAP_NAME = 0
 
-def main():
-	seed(1)
+def init(num_players):
+	global MAP_WIDTH,MAP_HEIGHT,N_ITERATIONS,H_RATIO,W_RATIO,MIN_ROOM_SIDE,CENTER_HUB_HOLE,CENTER_HUB_RADIO,MAP_NAME
+	MAP_WIDTH=int(500*sqrt(num_players))
+	MAP_HEIGHT=MAP_WIDTH
+	N_ITERATIONS=log(MAP_WIDTH*100,2)
+	H_RATIO=0.49
+	W_RATIO=H_RATIO
+	MIN_ROOM_SIDE = 32
+	CENTER_HUB_HOLE = 20 + min(180,MAP_WIDTH/60)
+	CENTER_HUB_RADIO = CENTER_HUB_HOLE*0.8
+	MAP_NAME="result%s.png"%MAP_WIDTH
+
+def main(num_players, seed_number):
+	logger = getLogger('BSPTree')
+
+	logger.info("Initialising")
+	init(num_players)
+	seed(seed_number)
 	canvas = Canvas(MAP_WIDTH, MAP_HEIGHT)
+	canvas.set_brush("empty")
+	canvas.filled_rectangle(0,0,MAP_WIDTH,MAP_HEIGHT)
+
+	logger.info("Generating container tree")
 	main_container = Container(0, 0, MAP_WIDTH, MAP_HEIGHT)
-	print("Initializated")
 	container_tree = split_container(main_container, N_ITERATIONS)
-	print("Container tree generated")
-	#container_tree.paint(canvas)
+
+	logger.info("Generating hallways")
 	canvas.set_brush("hallway")
 	draw_paths(canvas, container_tree)
+
+	logger.info("Generating rooms")
 	canvas.set_brush("room")
-	print("Paths drawn")
 	leafs = container_tree.get_leafs()
+	rooms = []
 	for i in range(0, len(leafs)):
 		if CENTER_HUB_HOLE < leafs[i].distance_from_center < MAP_WIDTH/2:
-			Room(leafs[i]).paint(canvas)
-	print("Rooms generated")
-	canvas.draw()
-	print(canvas)
+			rooms.append(Room(leafs[i]))
+			rooms[-1].paint(canvas)
 
-if __name__ == '__main__':
-	import cProfile
-	main()
-	#Profile.run("main()")
+	logger.info("Generating hub")
+	canvas.set_brush("hub")
+	canvas.circle(int(MAP_WIDTH/2),int(MAP_HEIGHT/2),int(CENTER_HUB_RADIO))
+
+	logger.info("Drawing image")
+	canvas.draw()

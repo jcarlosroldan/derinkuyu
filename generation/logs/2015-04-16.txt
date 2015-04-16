@@ -1,0 +1,164 @@
+[2015-04-16 20:15:13,329]	Initialising
+[2015-04-16 20:15:28,460]	Initialising
+[2015-04-16 20:15:50,809]	Initialising
+[2015-04-16 20:15:50,819]	Generating container tree
+[2015-04-16 20:15:50,920]	Generating hallways
+[2015-04-16 20:15:50,943]	Generating rooms
+[2015-04-16 20:15:51,087]	Generating hub
+[2015-04-16 20:15:51,094]	Drawing image
+[2015-04-16 20:16:55,671]	Initialising
+[2015-04-16 20:16:55,680]	Generating container tree
+[2015-04-16 20:16:55,848]	Generating hallways
+[2015-04-16 20:16:55,891]	Generating rooms
+[2015-04-16 20:16:56,131]	Generating hub
+[2015-04-16 20:16:56,138]	Drawing image
+[2015-04-16 20:17:06,353]	Initialising
+[2015-04-16 20:17:06,363]	Generating container tree
+[2015-04-16 20:17:06,466]	Generating hallways
+[2015-04-16 20:17:06,488]	Generating rooms
+[2015-04-16 20:17:06,626]	Generating hub
+[2015-04-16 20:17:06,633]	Drawing image
+[2015-04-16 20:17:19,929]	Initialising
+[2015-04-16 20:17:19,939]	Generating container tree
+[2015-04-16 20:17:20,008]	Generating hallways
+[2015-04-16 20:17:20,027]	Generating rooms
+[2015-04-16 20:17:20,136]	Generating hub
+[2015-04-16 20:17:20,143]	Drawing image
+[2015-04-16 20:17:32,224]	Initialising
+[2015-04-16 20:17:32,233]	Generating container tree
+[2015-04-16 20:17:32,293]	Generating hallways
+[2015-04-16 20:17:32,306]	Generating rooms
+[2015-04-16 20:17:32,394]	Generating hub
+[2015-04-16 20:17:32,402]	Drawing image
+[2015-04-16 20:17:41,622]	Initialising
+[2015-04-16 20:17:41,631]	Generating container tree
+[2015-04-16 20:17:41,685]	Generating hallways
+[2015-04-16 20:17:41,699]	Generating rooms
+[2015-04-16 20:17:41,774]	Generating hub
+[2015-04-16 20:17:41,782]	Drawing image
+[2015-04-16 20:18:34,244]	Initialising
+[2015-04-16 20:18:34,254]	Generating container tree
+[2015-04-16 20:18:34,307]	Generating hallways
+[2015-04-16 20:18:34,320]	Generating rooms
+[2015-04-16 20:18:34,399]	Generating hub
+[2015-04-16 20:18:34,406]	Drawing image
+[2015-04-16 20:18:52,871]	Initialising
+[2015-04-16 20:18:52,880]	Generating container tree
+[2015-04-16 20:18:52,938]	Generating hallways
+[2015-04-16 20:18:52,954]	Generating rooms
+[2015-04-16 20:18:53,038]	Generating hub
+[2015-04-16 20:18:53,045]	Drawing image
+[2015-04-16 20:19:01,810]	Initialising
+[2015-04-16 20:19:01,819]	Generating container tree
+[2015-04-16 20:19:01,871]	Generating hallways
+[2015-04-16 20:19:01,883]	Generating rooms
+[2015-04-16 20:19:01,962]	Generating hub
+[2015-04-16 20:19:01,969]	Drawing image
+[2015-04-16 20:19:53,501]	Initialising
+[2015-04-16 20:19:53,510]	Generating container tree
+[2015-04-16 20:19:53,563]	Generating hallways
+[2015-04-16 20:19:53,577]	Generating rooms
+[2015-04-16 20:19:53,653]	Generating hub
+[2015-04-16 20:19:53,661]	Drawing image
+[2015-04-16 20:20:03,197]	Initialising
+[2015-04-16 20:20:03,207]	Generating container tree
+[2015-04-16 20:20:03,260]	Generating hallways
+[2015-04-16 20:20:03,272]	Generating rooms
+[2015-04-16 20:20:03,352]	Generating hub
+[2015-04-16 20:20:03,359]	Drawing image
+[2015-04-16 20:20:09,278]	Initialising
+[2015-04-16 20:20:09,287]	Generating container tree
+[2015-04-16 20:20:09,341]	Generating hallways
+[2015-04-16 20:20:09,355]	Generating rooms
+[2015-04-16 20:20:09,433]	Generating hub
+[2015-04-16 20:20:09,440]	Drawing image
+[2015-04-16 20:20:15,709]	Initialising
+[2015-04-16 20:20:15,718]	Generating container tree
+[2015-04-16 20:20:15,744]	Generating hallways
+[2015-04-16 20:20:15,750]	Generating rooms
+[2015-04-16 20:20:15,791]	Generating hub
+[2015-04-16 20:20:15,799]	Drawing image
+[2015-04-16 20:20:20,495]	Initialising
+[2015-04-16 20:20:20,505]	Generating container tree
+[2015-04-16 20:20:20,557]	Generating hallways
+[2015-04-16 20:20:20,571]	Generating rooms
+[2015-04-16 20:20:20,647]	Generating hub
+[2015-04-16 20:20:20,654]	Drawing image
+[2015-04-16 20:20:25,860]	Initialising
+[2015-04-16 20:20:25,870]	Generating container tree
+[2015-04-16 20:20:25,922]	Generating hallways
+[2015-04-16 20:20:25,936]	Generating rooms
+[2015-04-16 20:20:26,015]	Generating hub
+[2015-04-16 20:20:26,023]	Drawing image
+[2015-04-16 20:20:27,407]	Initialising
+[2015-04-16 20:20:27,416]	Generating container tree
+[2015-04-16 20:20:27,468]	Generating hallways
+[2015-04-16 20:20:27,482]	Generating rooms
+[2015-04-16 20:20:27,558]	Generating hub
+[2015-04-16 20:20:27,565]	Drawing image
+[2015-04-16 20:20:29,226]	Initialising
+[2015-04-16 20:20:29,236]	Generating container tree
+[2015-04-16 20:20:29,287]	Generating hallways
+[2015-04-16 20:20:29,299]	Generating rooms
+[2015-04-16 20:20:29,377]	Generating hub
+[2015-04-16 20:20:29,384]	Drawing image
+[2015-04-16 20:20:30,746]	Initialising
+[2015-04-16 20:20:30,755]	Generating container tree
+[2015-04-16 20:20:30,809]	Generating hallways
+[2015-04-16 20:20:30,824]	Generating rooms
+[2015-04-16 20:20:30,902]	Generating hub
+[2015-04-16 20:20:30,909]	Drawing image
+[2015-04-16 20:20:33,460]	Initialising
+[2015-04-16 20:20:33,469]	Generating container tree
+[2015-04-16 20:20:33,516]	Generating hallways
+[2015-04-16 20:20:33,527]	Generating rooms
+[2015-04-16 20:20:33,601]	Generating hub
+[2015-04-16 20:20:33,608]	Drawing image
+[2015-04-16 20:20:43,398]	Initialising
+[2015-04-16 20:20:43,407]	Generating container tree
+[2015-04-16 20:20:43,458]	Generating hallways
+[2015-04-16 20:20:43,471]	Generating rooms
+[2015-04-16 20:20:43,545]	Generating hub
+[2015-04-16 20:20:43,552]	Drawing image
+[2015-04-16 20:20:44,828]	Initialising
+[2015-04-16 20:20:44,837]	Generating container tree
+[2015-04-16 20:20:44,890]	Generating hallways
+[2015-04-16 20:20:44,902]	Generating rooms
+[2015-04-16 20:20:44,981]	Generating hub
+[2015-04-16 20:20:44,988]	Drawing image
+[2015-04-16 20:20:47,102]	Initialising
+[2015-04-16 20:20:47,111]	Generating container tree
+[2015-04-16 20:20:47,163]	Generating hallways
+[2015-04-16 20:20:47,177]	Generating rooms
+[2015-04-16 20:20:47,253]	Generating hub
+[2015-04-16 20:20:47,260]	Drawing image
+[2015-04-16 20:20:49,004]	Initialising
+[2015-04-16 20:20:49,013]	Generating container tree
+[2015-04-16 20:20:49,065]	Generating hallways
+[2015-04-16 20:20:49,078]	Generating rooms
+[2015-04-16 20:20:49,155]	Generating hub
+[2015-04-16 20:20:49,162]	Drawing image
+[2015-04-16 20:24:36,621]	Initialising
+[2015-04-16 20:24:36,631]	Generating container tree
+[2015-04-16 20:24:36,631]	Generating hallways
+[2015-04-16 20:24:36,631]	Generating rooms
+[2015-04-16 20:24:36,631]	Generating hub
+[2015-04-16 20:24:36,639]	Drawing image
+[2015-04-16 20:24:42,824]	Initialising
+[2015-04-16 20:24:42,834]	Generating container tree
+[2015-04-16 20:24:42,834]	Generating hallways
+[2015-04-16 20:24:42,834]	Generating rooms
+[2015-04-16 20:24:42,834]	Generating hub
+[2015-04-16 20:24:42,841]	Drawing image
+[2015-04-16 20:25:01,216]	Initialising
+[2015-04-16 20:25:01,226]	Generating container tree
+[2015-04-16 20:25:01,226]	Generating hallways
+[2015-04-16 20:25:01,226]	Generating rooms
+[2015-04-16 20:25:01,226]	Generating hub
+[2015-04-16 20:25:01,233]	Drawing image
+[2015-04-16 20:25:18,175]	Initialising
+[2015-04-16 20:25:18,185]	Generating container tree
+[2015-04-16 20:25:18,239]	Generating hallways
+[2015-04-16 20:25:18,252]	Generating rooms
+[2015-04-16 20:25:18,323]	Generating hub
+[2015-04-16 20:25:18,331]	Drawing image

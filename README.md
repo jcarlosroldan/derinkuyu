@@ -12,7 +12,7 @@ A browser client will be [available here] in the future.
 To configure the server side, you will need Python 3 with the following extensions:
 * [Numpy 1.9.0]
 * [PIL 1.1.7]
-
+* [Noise 1.2.2]
 At the moment, you only can generate maps by specifying the number of players.
 
 ### How to contribute?
@@ -22,3 +22,4 @@ The development of this game is on an early stage, so the code is a bit *efferve
 [available here]:http://85.136.83.95/public/derinkuyu/
 [Numpy 1.9.0]:http://sourceforge.net/projects/numpy/files/NumPy/1.9.0/
 [PIL 1.1.7]:http://www.pythonware.com/products/pil/#pil117
+[Noise 1.2.2]: https://pypi.python.org/pypi/noise/1.2.2
