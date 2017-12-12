@@ -1,0 +1,108 @@
+2017-11-20 12:37:58,057	BSPTree	Initialising
+2017-11-20 12:37:58,059	BSPTree	Generating container tree
+2017-11-20 12:37:58,078	BSPTree	Generating hallways
+2017-11-20 12:37:58,082	BSPTree	Generating rooms
+2017-11-20 12:37:58,096	BSPTree	Generating hub
+2017-11-20 12:37:58,099	Main	Saving BSPTree.png
+2017-11-20 12:37:58,387	Cellautomata	Removing stray hallways
+2017-11-20 12:37:59,076	Cellautomata	Adding doors
+2017-11-20 12:37:59,622	Cellautomata	Replacing cellautomata values
+2017-11-20 12:37:59,623	Cellautomata	Getting mold
+2017-11-20 12:38:00,963	Main	Saving Cellautomata.png
+2017-11-20 12:38:00,985	Togetherness	Calculating nearest neighbours dictionary
+2017-11-20 12:39:27,998	BSPTree	Initialising
+2017-11-20 12:39:27,998	BSPTree	Generating container tree
+2017-11-20 12:39:28,016	BSPTree	Generating hallways
+2017-11-20 12:39:28,019	BSPTree	Generating rooms
+2017-11-20 12:39:37,421	BSPTree	Initialising
+2017-11-20 12:39:37,422	BSPTree	Generating container tree
+2017-11-20 12:39:37,435	BSPTree	Generating hallways
+2017-11-20 12:39:37,437	BSPTree	Generating rooms
+2017-11-20 12:39:37,451	BSPTree	Generating hub
+2017-11-20 12:39:37,453	Main	Saving BSPTree.png
+2017-11-20 12:39:37,495	Cellautomata	Removing stray hallways
+2017-11-20 12:39:38,200	Cellautomata	Adding doors
+2017-11-20 12:39:38,742	Cellautomata	Replacing cellautomata values
+2017-11-20 12:39:38,744	Cellautomata	Getting mold
+2017-11-20 12:39:40,036	Main	Saving Cellautomata.png
+2017-11-20 12:39:40,064	Togetherness	Calculating nearest neighbours dictionary
+2017-11-20 12:40:37,396	BSPTree	Initialising
+2017-11-20 12:40:37,396	BSPTree	Generating container tree
+2017-11-20 12:40:40,467	BSPTree	Generating hallways
+2017-11-20 12:40:40,846	BSPTree	Generating rooms
+2017-11-20 12:40:48,988	BSPTree	Initialising
+2017-11-20 12:40:48,988	BSPTree	Generating container tree
+2017-11-20 12:40:49,051	BSPTree	Generating hallways
+2017-11-20 12:40:49,061	BSPTree	Generating rooms
+2017-11-20 12:40:49,134	BSPTree	Generating hub
+2017-11-20 12:40:49,140	Main	Saving BSPTree.png
+2017-11-20 12:40:49,188	Cellautomata	Removing stray hallways
+2017-11-20 12:40:50,275	Cellautomata	Adding doors
+2017-11-20 12:40:51,036	Cellautomata	Replacing cellautomata values
+2017-11-20 12:40:51,037	Cellautomata	Getting mold
+2017-11-20 12:40:52,192	Main	Saving Cellautomata.png
+2017-11-20 12:40:52,227	Togetherness	Calculating nearest neighbours dictionary
+2017-11-20 12:42:57,088	BSPTree	Initialising
+2017-11-20 12:42:57,089	BSPTree	Generating container tree
+2017-11-20 12:42:57,097	BSPTree	Generating hallways
+2017-11-20 12:42:57,099	BSPTree	Generating rooms
+2017-11-20 12:42:57,474	BSPTree	Generating hub
+2017-11-20 12:42:57,476	Main	Saving BSPTree.png
+2017-11-20 12:42:57,519	Cellautomata	Removing stray hallways
+2017-11-20 12:42:58,099	Cellautomata	Adding doors
+2017-11-20 12:42:58,571	Cellautomata	Replacing cellautomata values
+2017-11-20 12:42:58,573	Cellautomata	Getting mold
+2017-11-20 12:42:59,482	Main	Saving Cellautomata.png
+2017-11-20 12:42:59,509	Togetherness	Calculating nearest neighbours dictionary
+2017-11-20 12:43:15,984	BSPTree	Initialising
+2017-11-20 12:43:15,985	BSPTree	Generating container tree
+2017-11-20 12:43:15,993	BSPTree	Generating hallways
+2017-11-20 12:43:15,995	BSPTree	Generating rooms
+2017-11-20 12:43:29,031	BSPTree	Initialising
+2017-11-20 12:43:29,031	BSPTree	Generating container tree
+2017-11-20 12:43:29,040	BSPTree	Generating hallways
+2017-11-20 12:43:29,041	BSPTree	Generating rooms
+2017-11-20 12:43:29,142	BSPTree	Generating hub
+2017-11-20 12:43:29,144	Main	Saving BSPTree.png
+2017-11-20 12:43:29,187	Cellautomata	Removing stray hallways
+2017-11-20 12:43:30,031	Cellautomata	Adding doors
+2017-11-20 12:43:30,575	Cellautomata	Replacing cellautomata values
+2017-11-20 12:43:30,576	Cellautomata	Getting mold
+2017-11-20 12:43:32,363	Main	Saving Cellautomata.png
+2017-11-20 12:43:32,388	Togetherness	Calculating nearest neighbours dictionary
+2017-11-20 12:43:42,480	BSPTree	Initialising
+2017-11-20 12:43:42,481	BSPTree	Generating container tree
+2017-11-20 12:43:42,489	BSPTree	Generating hallways
+2017-11-20 12:43:42,490	BSPTree	Generating rooms
+2017-11-20 12:43:42,632	BSPTree	Generating hub
+2017-11-20 12:43:42,633	Main	Saving BSPTree.png
+2017-11-20 12:43:42,673	Cellautomata	Removing stray hallways
+2017-11-20 12:43:43,437	Cellautomata	Adding doors
+2017-11-20 12:43:43,970	Cellautomata	Replacing cellautomata values
+2017-11-20 12:43:43,971	Cellautomata	Getting mold
+2017-11-20 12:43:45,445	Main	Saving Cellautomata.png
+2017-11-20 12:43:45,469	Togetherness	Calculating nearest neighbours dictionary
+2017-11-20 12:44:30,284	BSPTree	Initialising
+2017-11-20 12:44:30,285	BSPTree	Generating container tree
+2017-11-20 12:44:30,294	BSPTree	Generating hallways
+2017-11-20 12:44:30,296	BSPTree	Generating rooms
+2017-11-20 12:44:30,369	BSPTree	Generating hub
+2017-11-20 12:44:30,371	Main	Saving BSPTree.png
+2017-11-20 12:44:30,413	Cellautomata	Removing stray hallways
+2017-11-20 12:44:31,155	Cellautomata	Adding doors
+2017-11-20 12:44:31,675	Cellautomata	Replacing cellautomata values
+2017-11-20 12:44:31,676	Cellautomata	Getting mold
+2017-11-20 12:44:33,131	Main	Saving Cellautomata.png
+2017-11-20 12:44:33,154	Togetherness	Calculating nearest neighbours dictionary
+2017-11-20 12:45:01,694	BSPTree	Initialising
+2017-11-20 12:45:01,694	BSPTree	Generating container tree
+2017-11-20 12:45:01,703	BSPTree	Generating hallways
+2017-11-20 12:45:01,706	BSPTree	Generating rooms
+2017-11-20 12:45:01,717	BSPTree	Generating hub
+2017-11-20 12:45:01,719	Main	Saving BSPTree.png
+2017-11-20 12:45:01,762	Cellautomata	Removing stray hallways
+2017-11-20 12:45:02,457	Cellautomata	Adding doors
+2017-11-20 12:45:02,992	Cellautomata	Replacing cellautomata values
+2017-11-20 12:45:02,993	Cellautomata	Getting mold
+2017-11-20 12:45:04,301	Main	Saving Cellautomata.png
+2017-11-20 12:45:04,326	Togetherness	Calculating nearest neighbours dictionary

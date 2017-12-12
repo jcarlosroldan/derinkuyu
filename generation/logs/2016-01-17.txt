@@ -1,0 +1,32 @@
+2016-01-17 17:39:30,708	BSPTree	Initialising
+2016-01-17 17:39:30,708	BSPTree	Generating container tree
+2016-01-17 17:39:30,718	BSPTree	Generating hallways
+2016-01-17 17:39:30,718	BSPTree	Generating rooms
+2016-01-17 17:39:30,728	BSPTree	Generating hub
+2016-01-17 17:39:30,728	Main	Saving BSPTree.png
+2016-01-17 17:39:30,748	Cellautomata	Removing stray hallways
+2016-01-17 17:39:31,318	Cellautomata	Adding doors
+2016-01-17 17:39:31,768	Cellautomata	Replacing cellautomata values
+2016-01-17 17:39:31,768	Cellautomata	Getting mold
+2016-01-17 17:39:32,888	Main	Saving Cellautomata.png
+2016-01-17 17:39:32,898	Togetherness	Calculating nearest neighbours dictionary
+2016-01-17 17:39:32,968	Togetherness	Applying 176400 iterations of Togetherness
+2016-01-17 17:39:34,528	Main	Saving Togetherness.png
+2016-01-17 17:39:34,548	BiomeRenderer	Fixing map constraints
+2016-01-17 17:39:34,548	BiomeRenderer	Generating rooms
+2016-01-17 17:41:30,969	BSPTree	Initialising
+2016-01-17 17:41:30,969	BSPTree	Generating container tree
+2016-01-17 17:41:30,979	BSPTree	Generating hallways
+2016-01-17 17:41:30,979	BSPTree	Generating rooms
+2016-01-17 17:41:30,979	BSPTree	Generating hub
+2016-01-17 17:41:30,989	Main	Saving BSPTree.png
+2016-01-17 17:41:31,009	Cellautomata	Removing stray hallways
+2016-01-17 17:41:31,579	Cellautomata	Adding doors
+2016-01-17 17:41:32,029	Cellautomata	Replacing cellautomata values
+2016-01-17 17:41:32,029	Cellautomata	Getting mold
+2016-01-17 17:41:32,709	Main	Saving Cellautomata.png
+2016-01-17 17:41:32,729	Togetherness	Calculating nearest neighbours dictionary
+2016-01-17 17:41:32,789	Togetherness	Applying 175561 iterations of Togetherness
+2016-01-17 17:41:34,339	Main	Saving Togetherness.png
+2016-01-17 17:41:34,359	BiomeRenderer	Fixing map constraints
+2016-01-17 17:41:34,359	BiomeRenderer	Generating rooms

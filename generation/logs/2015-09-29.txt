@@ -1,0 +1,11 @@
+2015-09-29 18:35:25,489	BSPTree	Initialising
+2015-09-29 18:35:25,490	BSPTree	Generating container tree
+2015-09-29 18:35:25,509	BSPTree	Generating hallways
+2015-09-29 18:35:25,511	BSPTree	Generating rooms
+2015-09-29 18:35:25,527	BSPTree	Generating hub
+2015-09-29 18:35:25,642	Cellautomata	Removing stray hallways
+2015-09-29 18:35:26,150	Cellautomata	Adding doors
+2015-09-29 18:35:26,553	Cellautomata	Replacing cellautomata values
+2015-09-29 18:35:26,553	Cellautomata	Getting mold
+2015-09-29 18:35:27,566	Togetherness	Calculating nearest neighbours dictionary
+2015-09-29 18:35:27,633	Togetherness	Applying 186624 iterations of Togetherness

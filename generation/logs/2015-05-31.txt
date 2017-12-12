@@ -1,0 +1,25 @@
+2015-05-31 16:54:12,586	BSPTree	Initialising
+2015-05-31 16:54:12,658	BSPTree	Generating container tree
+2015-05-31 16:54:12,716	BSPTree	Generating hallways
+2015-05-31 16:54:12,721	BSPTree	Generating rooms
+2015-05-31 16:54:12,761	BSPTree	Generating hub
+2015-05-31 18:08:25,802	BSPTree	Initialising
+2015-05-31 18:08:25,817	BSPTree	Generating container tree
+2015-05-31 18:08:25,864	BSPTree	Generating hallways
+2015-05-31 18:08:25,864	BSPTree	Generating rooms
+2015-05-31 18:08:25,895	BSPTree	Generating hub
+2015-05-31 18:30:45,183	BSPTree	Initialising
+2015-05-31 18:30:45,183	BSPTree	Generating container tree
+2015-05-31 18:30:45,198	BSPTree	Generating hallways
+2015-05-31 18:30:45,198	BSPTree	Generating rooms
+2015-05-31 18:30:45,214	BSPTree	Generating hub
+2015-05-31 18:45:46,881	BSPTree	Initialising
+2015-05-31 18:45:46,881	BSPTree	Generating container tree
+2015-05-31 18:45:46,897	BSPTree	Generating hallways
+2015-05-31 18:45:46,912	BSPTree	Generating rooms
+2015-05-31 18:45:46,928	BSPTree	Generating hub
+2015-05-31 18:55:33,662	BSPTree	Initialising
+2015-05-31 18:55:33,662	BSPTree	Generating container tree
+2015-05-31 18:55:33,682	BSPTree	Generating hallways
+2015-05-31 18:55:33,685	BSPTree	Generating rooms
+2015-05-31 18:55:33,709	BSPTree	Generating hub

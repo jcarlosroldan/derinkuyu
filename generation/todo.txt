@@ -1,0 +1,5 @@
+cálculo de la dificultad que incluya el tamaño de la sala
+togetherness
+actualizar diagrama de generación
+
+BUG: paredes en los bordes del cellautomata

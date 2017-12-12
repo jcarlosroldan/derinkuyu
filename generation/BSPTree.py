@@ -44,11 +44,10 @@ class Container():
 	def paint(self, c):
 		c.stroke_rectangle(self.x, self.y, self.w, self.h)
 	def draw_path(self,c,container):
-		if True:#self.distance_from_center<MAP_WIDTH/2 and container.distance_from_center<MAP_WIDTH/2:
-			c.path(self.center[0],self.center[1],container.center[0],container.center[1])
+		c.path(self.center[0],self.center[1],container.center[0],container.center[1])
 
 class Canvas:
-	brushes = {"empty":0, "hallway":1, "room":2, "hub":3}
+	brushes = {"empty":0, "hallway":1, "room":2}
 	def __init__(self, w, h, color = "empty"):
 		self.board = zeros((h,w), dtype=uint8)
 		self.w = w
@@ -84,14 +83,14 @@ class Canvas:
 class Room:
 	environments = ["serene", "calm", "wild", "dangerous", "evil"]
 	biomes = ["rock", "rugged", "sand", "mossy", "muddy", "flooded", "gelid", "gloomy", "magma"]
-	biomes_CDF = cumsum([0.25,0.14,0.12,0.09,0.11,0.07,0.06,0.06,0.04,0.02,0.02,0.02])
+	biomes_CDF = cumsum([0.22,0.14,0.12,0.10,0.10,0.07,0.06,0.06,0.04,0.03,0.03,0.03])
 	def __init__(self, container):
-		self.x = container.x+randint(0, floor(container.w/5))
-		self.y = container.y+randint(0, floor(container.h/5))
+		self.x = container.x+randint(1, floor(container.w/3))
+		self.y = container.y+randint(1, floor(container.h/3))
 		self.w = container.w-(self.x-container.x)
 		self.h = container.h-(self.y-container.y)
-		self.w -= randint(0,ceil(self.w/5))
-		self.h -= randint(0,ceil(self.w/5))
+		self.w -= randint(0,floor(self.w/3))
+		self.h -= randint(0,floor(self.w/3))
 		self.environment = int(min(4,10*(container.distance_from_center/MAP_WIDTH)+random()*2-1))
 		roll = random()*0.9+(2*container.distance_from_center/MAP_WIDTH)*0.1
 		self.biome = next(n for n,b in enumerate(self.biomes_CDF) if roll<b)
@@ -164,8 +163,8 @@ def init(num_players):
 	H_RATIO=0.49
 	W_RATIO=H_RATIO
 	MIN_ROOM_SIDE = 32
-	CENTER_HUB_HOLE = 20 + min(180,MAP_WIDTH/60)
-	CENTER_HUB_RADIO = CENTER_HUB_HOLE*0.8
+	CENTER_HUB_HOLE = 32
+	CENTER_HUB_RADIO = CENTER_HUB_HOLE-MIN_ROOM_SIDE/2
 	MAP_NAME="result%s.png"%MAP_WIDTH
 
 def main(num_players, seed_number):
@@ -179,7 +178,8 @@ def main(num_players, seed_number):
 	canvas.filled_rectangle(0,0,MAP_WIDTH,MAP_HEIGHT)
 
 	logger.info("Generating container tree")
-	main_container = Container(0, 0, MAP_WIDTH, MAP_HEIGHT)
+	# -1 on the main container to remove borders to avoid opened border rooms
+	main_container = Container(0, 0, MAP_WIDTH-1, MAP_HEIGHT-1)
 	container_tree = split_container(main_container, N_ITERATIONS)
 
 	logger.info("Generating hallways")
@@ -196,7 +196,6 @@ def main(num_players, seed_number):
 			rooms[-1].paint(canvas)
 
 	logger.info("Generating hub")
-	canvas.set_brush("hub")
 	canvas.circle(int(MAP_WIDTH/2),int(MAP_HEIGHT/2),int(CENTER_HUB_RADIO))
 	#canvas.draw()
 

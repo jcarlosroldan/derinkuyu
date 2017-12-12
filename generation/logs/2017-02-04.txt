@@ -1,0 +1,12 @@
+2017-02-04 01:03:02,185	BSPTree	Initialising
+2017-02-04 01:03:02,186	BSPTree	Generating container tree
+2017-02-04 01:03:02,231	BSPTree	Generating hallways
+2017-02-04 01:03:02,236	BSPTree	Generating rooms
+2017-02-04 01:03:02,259	BSPTree	Generating hub
+2017-02-04 01:03:02,262	Main	Saving BSPTree.png
+2017-02-04 01:03:03,201	Cellautomata	Removing stray hallways
+2017-02-04 01:03:03,987	Cellautomata	Adding doors
+2017-02-04 01:03:04,525	Cellautomata	Replacing cellautomata values
+2017-02-04 01:03:04,544	Cellautomata	Getting mold
+2017-02-04 01:03:05,861	Main	Saving Cellautomata.png
+2017-02-04 01:03:05,885	Togetherness	Calculating nearest neighbours dictionary
